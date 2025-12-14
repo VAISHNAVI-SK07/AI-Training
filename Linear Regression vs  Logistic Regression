@@ -1,0 +1,34 @@
+Linear Regression 
+Linear Regression is a supervised learning algorithm used in machine learning and statistics.
+It is mainly used to predict continuous numerical values.
+The algorithm models the relationship between independent variables (features) and a dependent variable (target).
+It assumes a linear relationship between input variables and the output.
+The model is represented by a linear equation where the output is a weighted sum of inputs plus a bias term.
+The goal of Linear Regression is to fit a best-fit straight line through the data points.
+Model parameters (weights and bias) are learned during training.
+The learning process minimizes the error between predicted values and actual values.
+The most commonly used loss function is Mean Squared Error (MSE).
+Linear Regression assumes independence of errors and constant variance (homoscedasticity).
+It also assumes that residuals are normally distributed.
+The algorithm is simple, fast, and easy to interpret.
+It is widely used in economics, finance, healthcare, and engineering.
+Common applications include house price prediction, salary estimation, sales forecasting, and trend analysis.
+Linear Regression is sensitive to outliers and does not perform well with non-linear data.
+
+
+Logistic Regression 
+Logistic Regression is a supervised learning algorithm used for classification problems.
+It is most commonly applied to binary classification tasks.
+Despite its name, Logistic Regression is not used for predicting continuous values.
+It predicts the probability that an input belongs to a particular class.
+The algorithm starts by computing a linear combination of input features.
+This value is passed through a sigmoid (logistic) function.
+The sigmoid function maps outputs to a range between 0 and 1.
+A decision threshold (usually 0.5) is used to assign class labels.
+Logistic Regression is trained using the log loss (binary cross-entropy) function.
+The loss function measures how close predicted probabilities are to actual class labels.
+It does not assume a linear relationship between input features and output labels.
+However, it assumes linearity between features and the log-odds of the outcome.
+Logistic Regression is simple, efficient, and easy to interpret.
+It is widely used in spam detection, medical diagnosis, fraud detection, and credit scoring.
+The algorithm can be extended to multiclass classification using One-vs-Rest or Softmax methods.
