@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Image Classification</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1 class="brand">🐾 Animal Image Classification</h1>
+        <p>Upload an animal image and let CNN predict it</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Upload Image
+        </div>
+
+        <div class="card-body">
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                
+                <label class="dropzone">
+                    <input type="file" name="file" accept="image/*" required hidden>
+                    <span>📤 Click or Drop Image Here</span>
+                </label>
+
+                <div class="actions">
+                    <button type="submit">Predict</button>
+                </div>
+            </form>
+
+            {% if prediction %}
+                <div class="result">
+                    <h3>Prediction Result</h3>
+                    <span class="badge">{{ prediction }}</span>
+                </div>
+            {% endif %}
+
+            {% if error %}
+                <div class="error">
+                    {{ error }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
